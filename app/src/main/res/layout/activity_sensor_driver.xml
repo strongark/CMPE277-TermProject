@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sensor_driver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9B26AF"
+    android:orientation="vertical"
+    tools:context="com.cmpe277.asynctask.SensorDriverActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#7A1EA1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_thermo_aqua" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:text="89F"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/txt_temperature" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_humidity"
+            />
+        <TextView
+            android:id="@+id/txt_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:text="20%"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        android:background="#7A1EA1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_brightness"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txt_activities"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:text="231"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_loop"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_sensors"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="20"
+            />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0"-->
+        <!--android:background="#691A99">-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_generate"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="Generate"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onGenerate"-->
+            <!--/>-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_cancel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="Cancel"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onCancel"/>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#691A99">
+        <Button
+            android:id="@+id/btn_listen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="LISTEN"
+            android:layout_weight="1"
+            android:onClick="onListenSensor"
+            />
+        <Button
+            android:id="@+id/btn_stopListen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="STOP"
+            android:layout_weight="1"
+            android:onClick="onStopListenSensor"/>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0"-->
+        <!--android:background="#691A99">-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_lightOn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="LIGHT ON"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onLightOn"-->
+            <!--/>-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_lightOff"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="LIGHT OFF"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="onLightOff"/>-->
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output"
+        android:textColor="#9B26AF"
+        android:background="#FFFF"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/txt_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:scrollbars="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textColor="#000000"
+            android:gravity="bottom"
+            android:text="Output 1\nHumidity: 20%\nTemperature: 89F\nLight: 231\n-------------------------\nOutput 2\nHumidity: 21%\nTemperature: 90F\nLight: 200\n-------------------------\nOutput 3\nHumidity: 22%\nTemperature: 91F\nLight: 300\n"
+            />
+    </LinearLayout>
+
+</LinearLayout>
